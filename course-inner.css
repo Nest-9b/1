@@ -158,10 +158,25 @@
 	color: #ffffff;
 }
 
-
+.video-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  }
+  
+  /* Default (PC) */
+  .responsive-video {
+	width: 1200px;
+	height: 650px;
+  }
 
 @media screen and (max-width: 769px)
-{
+{	
+	.responsive-video {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 789 / 475;
+	  }
 	#course-inner
 	{
 		display: flex;
@@ -200,6 +215,9 @@
 /*----------------------------------------------------*/
 @media screen and (max-width: 475px)
 {
+	.responsive-video {
+		height: 300px;
+	  }
 	#course-inner .overview .course-head .c-name
 	{
 		width: 50%;
